@@ -22,7 +22,7 @@ MemoryLimit=25G
 2. systemctl start docker_limit.slice
 
 3. Edit /etc/docker/daemon.json
-
+```
 {
   
   "cgroup-parent": "/docker_limit.slice",
@@ -32,5 +32,5 @@ MemoryLimit=25G
     "max-file": "3"
   }
 }
-
+```
 4. Restart Docker daemon: systemctl restart docker
