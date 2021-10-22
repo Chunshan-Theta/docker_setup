@@ -19,7 +19,10 @@ CPUQuota=700%
 MemoryAccounting=true
 MemoryLimit=25G
 ```
-2. systemctl start docker_limit.slice
+2. start
+```
+systemctl start docker_limit.slice
+```
 
 3. Edit /etc/docker/daemon.json
 ```
@@ -33,4 +36,7 @@ MemoryLimit=25G
   }
 }
 ```
-4. Restart Docker daemon: systemctl restart docker
+4. Restart Docker daemon: 
+``` 
+systemctl restart docker
+```
